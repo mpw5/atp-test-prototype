@@ -18,8 +18,6 @@ router.get('/banking-test', function (req, res) {
   // get the answer from the query string (eg. ?over18=false)
   var openBanking = req.query.openBanking
 
-  console.log(openBanking)
-
   if (openBanking === 'No') {
     // redirect to the relevant page
     res.redirect('/other-departments')
