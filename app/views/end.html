@@ -1,12 +1,4 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  An ATP prototype
-{% endblock %}
-
-{% block content %}
-
-{% include "includes/phase_banner_alpha.html" %}
+{% extends "layout.html" %} {% block page_title %} An ATP prototype {% endblock %} {% block content %} {% include "includes/phase_banner_alpha.html" %}
 
 <main id="content" role="main">
 
@@ -20,11 +12,10 @@
   </div>
 
   <div class="grid-row">
+
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
-        {% if serviceName %} {{ serviceName }} {% endif %}
-      </h1>
+      <h1 class="heading-xlarge">{% if serviceName %} {{ serviceName }} {% endif %}</h1>
 
       <p>Thank you for registering to use this service</p>
 
