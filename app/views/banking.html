@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  An ATP prototype
+{% endblock %}
+
+{% include "includes/phase_banner_alpha.html" %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="https://www.gov.uk">Home</a></li>
+      <li><a href="/atp">Start</a></li>
+      <li><a href="">Register for Open Banking</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <h1 class="heading-medium">Register for Open Banking</h1>
+
+      <p>Link to the citizen's online banking here</p>
+
+    </div>
+
+  </div>
+
+  <p></p>
+
+  <div class="form-group">
+      <a class="button button-start" href="/other-departments" role="button">Next</a>
+  </div>
+
+</main>
+
+{% endblock %}

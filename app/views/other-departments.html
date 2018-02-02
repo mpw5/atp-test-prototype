@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  An ATP prototype
+{% endblock %}
+
+{% include "includes/phase_banner_alpha.html" %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="https://www.gov.uk">Home</a></li>
+      <li><a href="/atp">Start</a></li>
+      <li><a href="/open-banking">Register for Open Banking</a></li>
+      <li><a href="">Other Government Departments</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/end" method="get" class="form">
+
+
+
+      <h1 class="heading-xlarge">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <h1 class="heading-medium">Other Government Departments</h1>
+
+      <p>Other government departments, for example HMCTS, DWP, blah blah blah </p>
+
+      <legend>
+        <h2 class="heading-medium">Do you give the LAA permission to access data about you held by other government departments?</h1>
+      </legend>
+
+      <div class="form-group">
+        <fieldset class="inline">
+
+      <div class="multiple-choice">
+        <input id="radio-1" type="radio" name="otherDepartments" value="Yes" required="required">
+        <label for="radio-1">Yes</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-2" type="radio" name="otherDepartments" value="No" required="required">
+        <label for="radio-2">No</label>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" class="button" value="Continue">
+      </div>
+
+    </fieldset>
+
+    </div>
+
+  </div>
+
+  <p></p>
+
+  <div class="form-group">
+      <a class="button button-start" href="/end" role="button">Finish</a>
+  </div>
+
+
+</form>
+
+</main>
+
+
+{% endblock %}

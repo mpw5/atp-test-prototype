@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  An ATP prototype
+{% endblock %}
+
+{% include "includes/phase_banner_alpha.html" %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="https://www.gov.uk">Home</a></li>
+      <li><a href="/atp">Start</a></li>
+      <li><a href="">Register for Open Banking</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/banking-test" method="get" class="form">
+
+
+      <h1 class="heading-xlarge">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <h1 class="heading-medium">Open Banking</h1>
+
+      <p>Open banking is blah blah blah </p>
+
+      <legend>
+        <h2 class="heading-medium">Do you give the LAA permission to access data from your bank account using Open Banking?</h1>
+      </legend>
+
+      <div class="form-group">
+        <fieldset class="inline">
+
+          <legend class="visuallyhidden">Do you give the LAA permission to access data from your bank account using Open Banking?</legend>
+
+
+      <div class="multiple-choice">
+        <input id="radio-1" type="radio" name="openBanking" value="Yes" required="required">
+        <label for="radio-1">Yes</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-2" type="radio" name="openBanking" value="No" required="required">
+        <label for="radio-2">No</label>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" class="button" value="Continue">
+      </div>
+
+
+    </fieldset>
+  </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}
